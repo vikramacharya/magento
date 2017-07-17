@@ -1,0 +1,19 @@
+This is a quick an easy hack to programmatically create a cart price rule.
+
+1. Temporarely edit Mage_Adminhtml_Promo_QuoteController::saveAction()
+
+2. Around line 123, you will find $data = $this->getRequest()->getPost();
+
+3. Below this line create a new line containing :
+var_export($data);
+die();
+
+4. Go to the admin panel and create a cart promo rule as you want it to be
+
+5. Save it and then the code created at step 3 will throw you the data as it has been posted on the step 4 form.
+
+6. Copy the thrown code
+
+7. Rollback steps 1, 2, 3.
+
+8. Use the code method supplied in the cart_price_rule_setup.php file of this gist to create the rule based on code copied at step 6
