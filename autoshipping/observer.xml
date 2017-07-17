@@ -1,0 +1,9 @@
+<sales_quote_collect_totals_before>
+    <observers>
+        <!-- Set default shipping method and rate when necessary -->
+        <autoshipping>
+            <class>My_Module_Model_Observer</class>
+            <method>setQuoteShippingMethod</method>
+        </autoshipping>
+    </observers>
+</sales_quote_collect_totals_before>
